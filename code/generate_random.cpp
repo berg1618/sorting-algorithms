@@ -11,12 +11,10 @@ int main() {
     // Seed the random number generator
     srand(time(nullptr));
 
-    // Fill the array with random numbers
     for (int i = 0; i < size; ++i) {
-        arr[i] = rand() % 100; // Generates random numbers between 0 and 99
+        arr[i] = rand() % 100; 
     }
 
-    // Print the array
     cout << "Unordered array elements: ";
     for (int i = 0; i < size; ++i) {
         cout << arr[i] << " ";

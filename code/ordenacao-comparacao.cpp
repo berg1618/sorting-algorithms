@@ -9,7 +9,6 @@ Date: 04/15/2023
 
 using namespace std;
 
-//function just to print the array
 void printArray(vector<int> &v){
 	int n=v.size();
 	for(int i=0;i<n;i++){
@@ -26,7 +25,6 @@ void swap(int* a, int* b){
 }
 
 
-//--------------------------------sort algorithms---------------------------
 //+++++++++++++++++++++++merge sort++++++++++++++++++++++++++++++
 void merge(vector<int> &v, int low, int high, int mid){
 	int i, j, k, c[50];
@@ -71,10 +69,6 @@ void mergeSort(vector<int> &v, int low, int high){
 
 }
 
-
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
 //+++++++++++++++++++++++quick sort++++++++++++++++++++++++++++++
 int partition(vector<int> &v, int low, int high){
 	int pivot = v[high];
@@ -96,17 +90,9 @@ void quickSort(vector<int> &v, int low, int high){
 		quickSort(v, pi + 1, high);
 	}
 }
-//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-
 
 //shell sort
 void shellSort(vector<int> &v){
-	/*
-		Parameters:
-		v = input array to be ordered
-	*/
 	int n=v.size();
 	for (int h=n/2; h>0;h/=2){
 		for (int i=h;i<n;i+=1){
@@ -121,10 +107,6 @@ void shellSort(vector<int> &v){
 
 //insertion sort O(n²)
 void insertionSort(vector<int> &v){
-	/*
-		Parameters:
-		v = input array to be ordered
-	*/
 	int n=v.size();
 	int i,key,j;
 	for(i=1;i<n;i++){
@@ -141,10 +123,6 @@ void insertionSort(vector<int> &v){
 
 //bubble sort O(n²)
 void bubbleSort(vector<int> &v){
-	/*
-		Parameters:
-		v = input array to be ordered
-	*/
 	int n=v.size();
 	for(int i=0;i<n-1;i++){
 		for (int j=0;j<n-i-1;j++){
@@ -159,10 +137,6 @@ void bubbleSort(vector<int> &v){
 
 //selection sort O(n²)
 void selectionSort(vector<int> &v){
-	/*
-		Parameters:
-		v = input array to be ordered
-	*/
 	int min_idx;
 	int n=v.size();
 	for(int i=0;i<n-1;i++){
@@ -180,7 +154,7 @@ void selectionSort(vector<int> &v){
 }
 
 int main(){
-	vector<int> v={78,2,7,97,14,1,27,60};
+	vector<int> v={34, 87, 49, 72, 67, 96, 90, 5, 94, 91};
 	int idx;
 	
 	cout<<"unordered array:\n";
